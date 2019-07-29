@@ -3,7 +3,7 @@ import { MyTestModel } from "./model";
 import connection from "./mySQLConnection";
 
 const doWork = async () => {
-    await connection.sync();
+    //await connection.sync();
 
     await MyTestModel.destroy({
         where: {
@@ -15,21 +15,26 @@ const doWork = async () => {
 
     await MyTestModel.create({
         amount: 99.76,
+        myInt: 1
     });
 
     await MyTestModel.create({
         amount: 10,
+        myInt: 2
     });
 
     await MyTestModel.create({
         amount: 1.99,
+        myInt: 3
     });
 
     const items = await MyTestModel.findAll({
     });
 
-    // tslint:disable-next-line: no-console
-    console.log(`Count: ${items.length}`);
+    for(const item of items) {
+        console.log(item.myInt);
+        console.log(`ID: ${item.id} -- ${typeof item.amount}`);
+    }
 };
 
 doWork().then(async () => {

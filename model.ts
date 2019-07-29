@@ -1,12 +1,11 @@
+import Big from "big.js";
 import { DataTypes, Model, Sequelize } from "sequelize";
-import BigJsCol from "./BigJsColumn";
 import connection from "./mySQLConnection";
-
-BigJsCol(Sequelize);
 
 export class MyTestModel extends Model {
     public id!: number;
-    public amount!: string;
+    public amount!: Big;
+    public myInt!: number;
 }
 
 MyTestModel.init({
@@ -15,7 +14,8 @@ MyTestModel.init({
         autoIncrement: true,
         primaryKey: true,
     },
-    amount: new DataTypes.BIGJS(13, 4)
+    amount: new DataTypes.BIGJS(13, 4),
+    myInt: new DataTypes.NEWTYPE()
 }, {
     sequelize: connection,
     tableName: "MyTestModel",
