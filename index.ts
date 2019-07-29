@@ -1,6 +1,6 @@
 import { Op } from "sequelize";
+import connection from "./connectionToggle";
 import { MyTestModel } from "./model";
-import connection from "./mySQLConnection";
 
 const doWork = async () => {
     //await connection.sync();

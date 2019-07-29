@@ -1,6 +1,6 @@
 import Big from "big.js";
 import { DataTypes, Model, Sequelize } from "sequelize";
-import connection from "./mySQLConnection";
+import connection from "./connectionToggle";
 
 export class MyTestModel extends Model {
     public id!: number;
