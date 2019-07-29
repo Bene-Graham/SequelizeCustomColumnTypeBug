@@ -33,18 +33,6 @@ node_modules
 *.tmp
 *.env
 
-# Ignore all JS and JS Map file
-/Web/**/*.js
-/Web/**/*.js.map
-
-# Ignore load test results
-/Web/test/load/results
-
 # Any thing public folder is pure JS and needs to be include
-!/Web/public/**/*js
-!/Web/public/**/*js.map
-/Web/public/javascripts/app/**/*.js
-/Web/public/javascripts/app/**/*.js.map
-!/Web/gruntfile.js
-/Web/.vscode/launch.json
-!/Web/migrations/**/*js
+**/*js
+!sequelize-additions.js
