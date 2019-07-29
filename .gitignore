@@ -34,5 +34,6 @@ node_modules
 *.env
 
 # Any thing public folder is pure JS and needs to be include
-**/*js
+**/*.js
+**/*.js.map
 !sequelize-additions.js
