@@ -1,0 +1,25 @@
+{
+  "name": "sequelize-custom-column-type-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --watch --project tsconfig.json",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "big.js": "5.2.2",
+    "bluebird": "3.5.5",
+    "mysql2": "1.6.5",
+    "sequelize": "5.9.0",
+    "sqlite3": "4.0.9"
+  },
+  "devDependencies": {
+    "@types/big.js": "4.0.5",
+    "@types/bluebird": "3.5.27",
+    "@types/node": "12.6.8",
+    "@types/validator": "10.11.2"
+  }
+}

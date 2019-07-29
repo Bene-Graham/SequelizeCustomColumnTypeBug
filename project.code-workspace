@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.trimTrailingWhitespace": true,
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/*.js": { "when": "$(basename).ts"},
+			"**/*.js.map": true
+		},
+		"editor.minimap.enabled": false,
+		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 2000,
+		"explorer.autoReveal": false,
+		"typescript.referencesCodeLens.enabled": true
+	}
+}
